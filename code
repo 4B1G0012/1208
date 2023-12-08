@@ -1,0 +1,35 @@
+class Fruit:
+    
+    def __init__(self, input_fruit_name, input_fruit_weight, input_fruit_unit_price):
+        self._fruit_name = input_fruit_name
+        self._fruit_weight = input_fruit_weight
+        self._fruit_unit_price = input_fruit_unit_price
+
+    
+    def calculate_fruit_price(self):
+        return self._fruit_weight * self._fruit_unit_price
+
+fruit_object1 = Fruit("Apple", 300, 0.05)
+fruit_object2 = Fruit("Banana", 500, 0.020)
+fruit_object3 = Fruit("Watermelon", 1300, 0.015)
+
+print(fruit_object1._fruit_name)
+print("Price =", fruit_object1._fruit_weight * fruit_object1._fruit_unit_price)
+print("Price =", fruit_object1.calculate_fruit_price())  
+print(fruit_object2._fruit_name)
+print("Price =", fruit_object2._fruit_weight * fruit_object2._fruit_unit_price)
+print("Price =", fruit_object2.calculate_fruit_price())
+
+class DailyExercise:
+    def __init__(self, input_exercise_name, input_exercise_time_minutes, input_calories_per_unit_time):
+        self._exercise_name = input_exercise_name
+        self._exercise_time_minutes = input_exercise_time_minutes
+        self._calories_per_unit_time = input_calories_per_unit_time
+
+    def calculate_total_calories_burned(self):
+        return self._exercise_time_minutes * self._calories_per_unit_time
+
+daily_exercise_1 = DailyExercise("Running", 30, 10)
+daily_exercise_2 = DailyExercise("Swimming", 50, 20)
+total_calories = daily_exercise_1.calculate_total_calories_burned() + daily_exercise_2.calculate_total_calories_burned()
+print(f'Daily Exercise Statistics: {daily_exercise_1._exercise_name} + {daily_exercise_2._exercise_name} Total Calories Burned = {total_calories}')
